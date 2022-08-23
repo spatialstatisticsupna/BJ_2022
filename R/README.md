@@ -4,8 +4,7 @@ This folder contains the R code to reproduce all the models, tables and figures 
 
 [**Section1_SimulatedDataSet**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/tree/main/R/Section1_SimulatedDataSet "Section1_SimulatedDataSet")
 
-This folder contains two simulated data files:
-The **DBrainNA.txt**, used to reproduce the descriptive analysis. This file contains the following information:
+This folder contains two simulated data files: The **DBrainNA.txt**, used to reproduce the descriptive analysis. This file contains the following information:
 
 -   **sex**: Takes value 1 for males and 2 for females.
 
@@ -51,10 +50,9 @@ The [Define_Fit_Models.R](https://github.com/spatialstatisticsupna/Biometrical_J
 
 The neighbourhood matrix is also provided by the **nc.inla** file.
 
-[Section4_ValidatingPredictions](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/tree/main/R/Section4_ValidatingPredictions "Section4_ValidatingPredictions")
+[**Section4_ValidatingPredictions**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/tree/main/R/Section4_ValidatingPredictions "Section4_ValidatingPredictions")
 
-In this section the the predictive ability of all the models can be assesed as the code to reproduce and compute the one step ahead predictions is provided.
-First open [Validation_MainFile.R](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/Validation_MainFile.R "Validation_MainFile.R") to
+In this section the the predictive ability of all the models can be assesed as the code to reproduce and compute the one step ahead predictions is provided. First open [Validation_MainFile.R](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/Validation_MainFile.R "Validation_MainFile.R") to
 
 1.  Generate data sets for validation. These data sets are saved at *DataforValidation* folder
 
@@ -64,6 +62,6 @@ First open [Validation_MainFile.R](https://github.com/spatialstatisticsupna/Biom
 
 Secondly, go to *ValidationResults* folder and run the code described in the file [GetValidationResults.R](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/ValidationResults/GetValidationResults.R "GetValidationResults.R") in order to get the results presented in *Section 4 Validating cancer incidence predictions*
 
-[Section5_RealDataAnalysis](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/tree/main/R/Section5_RealDataAnalysis "Section5_RealDataAnalysis")
+[**Section5_RealDataAnalysis**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/tree/main/R/Section5_RealDataAnalysis "Section5_RealDataAnalysis")
 
 In this folder, the results illustrated in *Section 5 Real data analysis* can be reproduce. Note that in this section model **M8** is considered to provide BCNS cancer incidence predictions in Navarre and the Basque Country by region, age-group, gender and period. The reader can reproduce this results with any other model. To do so, the corresponding Rdata stored in *Section3_ModelDefinitionFitting* should be moved to this folder. Figures and tables of this section can be automatically reproduce running the code described in the file [RealDataAnalisisMainFile.R](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section5_RealDataAnalysis/RealDataAnalisisMainFile.R "RealDataAnalisisMainFile.R"). This file call to the rest of .R files stored in this folder.
