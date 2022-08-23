@@ -18,7 +18,7 @@ The **DBrain.txt** file contains the following information:
 
 -   **outcome**: Indicates if the observed number of cases are incident cases or deaths
 
-The **Define_Fit_Models.txt** file contains the code to fit models 1-to-8 described in the paper. It is highly recommended to read the INLA documentation regarding "besag2" model to better understand how Besag2 model for weighted spatial effects should be defined. To do this open Rstudio and run the following code
+The **Define_Fit_Models.txt** file contains the code to fit models M1-to-M8 described in the paper. It is highly recommended to read the INLA documentation regarding "besag2" model to better understand how Besag2 model for weighted spatial effects should be defined. To do this open Rstudio and run the following code
 
 `library(INLA)`
 
