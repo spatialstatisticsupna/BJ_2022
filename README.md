@@ -28,4 +28,4 @@ This work has been supported by Projects MTM2017-82553-R (AEI/FEDER, UE), PID202
 
 # **References**
 ------------------------------------------------------------------------
-Etxeberria, J., Goicoa, T., and Ugarte, M.D. (2022). Using mortality to predict incidence for rare and lethal cancers. *Biometrical Journal*, Accepted
+Etxeberria, J., Goicoa, T., and Ugarte, M.D. (2022). *Using mortality to predict incidence for rare and lethal cancers*. Biometrical Journal, Accepted
