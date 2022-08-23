@@ -24,7 +24,7 @@ R code to fit the multivariate spatio-temporal models described in the paper are
 
 This work has been supported by Projects MTM2017-82553-R (AEI/FEDER, UE), PID2020-113125RB-I00/MCIN/AEI/10.13039/501100011033 and Proyecto Jóvenes Investigadores PJUPNA2018-11.
 
-[(https://github.com/spatialstatisticsupna/Multivariate_spatio_temporal_P_spline/raw/master/micin-aei.jpg)](https://github.com/spatialstatisticsupna/Multivariate_spatio_temporal_P_spline/blob/master/micin-aei.jpg)
+[![](https://github.com/spatialstatisticsupna/Multivariate_spatio_temporal_P_spline/raw/master/micin-aei.jpg)](https://github.com/spatialstatisticsupna/Multivariate_spatio_temporal_P_spline/blob/master/micin-aei.jpg)
 
 # **References**
 ------------------------------------------------------------------------
