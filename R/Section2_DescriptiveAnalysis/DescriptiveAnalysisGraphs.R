@@ -3,7 +3,6 @@
 # Author: Jaione Etxeberria 
 # This coda is developed in R-4.2.1 version
 
-rm(list=ls())
 ######################################################################
 ##### FIGURE 1: Map of regions in Navarre and Basque Country
 library(sf)
