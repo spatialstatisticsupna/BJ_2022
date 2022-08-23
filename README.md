@@ -17,7 +17,7 @@ This repository contains the R code to fit the models described in the paper ent
 # **R code**
 ------------------------------------------------------------------------
 
-R code to fit the multivariate spatio-temporal models described in the paper are included [here](https://github.com/spatialstatisticsupna/Using-mortality-to-predict-incidence-for-rare-and-lethal-cancers-in-very-small-areas/blob/master/R/).
+R code to fit the multivariate spatio-temporal models described in the paper is included [here](https://github.com/spatialstatisticsupna/Using-mortality-to-predict-incidence-for-rare-and-lethal-cancers-in-very-small-areas/blob/master/R/).
 
 # **Acknowledgements**
 ------------------------------------------------------------------------
