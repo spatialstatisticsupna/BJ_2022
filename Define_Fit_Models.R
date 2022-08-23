@@ -1,8 +1,4 @@
-
-
-rm(list = ls())
-
-
+## This is the code that allows to fit and check the models proposed in the paper
 library(Hmisc)
 library(sp)
 library(INLA)
@@ -15,9 +11,7 @@ pop=DBrain$pop
 age=DBrain$age
 period=DBrain$period
 
-
 #### Upload the graph to define the spatial shared component term
-
 g <- inla.read.graph("nc.inla") 
 
 #### Create the graph to define the shared component term for period in M7
@@ -34,9 +28,7 @@ gage=inla.read.graph(P.RW1)
 
  
 #### Prior distributions on the precision parameters
-
 # improper uniform priors on the standard deviations
-
 sdunif="expression:
 logdens=-log_precision/2;
 return(logdens)"
@@ -46,8 +38,7 @@ pcprec <- list(theta=list(prior='pc.prec', param=c(1,0.01)))
 priorselec=pcprec 
 
 #### Index definition 
-
-#### Create a gender-specific index for the spatial shared component term
+## Create a gender-specific index for the spatial shared component term
 N=length(unique(DBrain$region))
 i=array(0,dim(DBrain)[1])
 i1=which(DBrain$outcome=="Incidence")
@@ -61,28 +52,27 @@ imale[which(DBrain$sex==2)]=NA
 ifemale=i
 ifemale[which(DBrain$sex==1)]=NA
 
-#### Create an index for the age shared component term
+## Create an index for the age shared component term
 A=length(unique(DBrain$age))
 iage=array(0,dim(DBrain)[1])
 iage[i1]=DBrain$age[i1]
 iage[i2]=DBrain$age[i2]+A
 
-#### Create an index for the period shared component term
+## Create an index for the period shared component term
 P=length(unique(DBrain$period))
 iperiod=array(0,dim(DBrain)[1])
 iperiod[i1]=DBrain$period[i1]
 iperiod[i2]=DBrain$period[i2]+P
 
-#### Create a disease-specific index
+## Create a disease-specific index
 disease=array(0,dim(DBrain)[1])
 disease[i1]=1
 disease[i2]=2
 
-#### Create a gender-specific index
-
+## Create a gender-specific index
 k=DBrain$sex
 
-#### Create an index for incidence specific spatial unstructured term
+## Create an index for incidence specific spatial unstructured term
 i_inci_het=DBrain$region
 i_inci_het[i2]=NA
 
@@ -130,14 +120,13 @@ formula7 = y~ f(imale, model="besag2", graph=g, constr=T, hyper=priorselec,scale
   f(age, model="rw1",hyper=priorselec,constr=T,scale.model = TRUE) 
 
 #M8
-
 formula8 = y~ f(imale, model="besag2", graph=g, constr=T, hyper=priorselec,scale.model = TRUE) + 
   f(ifemale, model="besag2", constr =T, graph=g,hyper=priorselec,scale.model = TRUE) +
   f(i_inci_het, model="iid",hyper=priorselec) +
   f(iage, model="besag2", constr=T, graph=gage, hyper=priorselec,scale.model = TRUE) +
   f(period, model="rw1",hyper=priorselec,constr=T,replicate=k,scale.model = TRUE) 
 
-#### Fit all the models
+#### Fit and save the results of all the models
 mods=1:8
 for(mod in mods){
   formula=get(paste0("formula",mod))
@@ -151,8 +140,7 @@ for(mod in mods){
   rm(list=c("res",paste0("result",mod)))
 }
 
-
-#### Check the results in terms of different model selection criterion
+#### Check the results in terms of model selection criterion
 
 for(modnu in 1:8){
   load(paste0("Modelo",modnu,".Rdata"))
@@ -168,8 +156,6 @@ for(modnu in 1:8){
   assign(paste0("results",modnu),medidas)
 }
 
-table=cbind(round(rbind(results1,results2,results3,results4,results5,results6,results7,
-                      results8),3))
-
+tab=cbind(round(rbind(results1,results2,results3,results4,results5,results6,results7,results8),3))
 tab
 
