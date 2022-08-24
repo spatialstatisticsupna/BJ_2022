@@ -3,7 +3,7 @@
 Biometrical Journal 2022 (Accepted)
 ------------------------------------------------------------------------
 
-This repository contains the R code to fit the models described in the paper entitled *"Using mortality to predict incidence for rare and lethal cancers in very small areas"* (Etxeberria et al., 2022).
+This repository contains the R code to create figures and tables similar to those described in the paper entitled *"Using mortality to predict incidence for rare and lethal cancers in very small areas"* (Etxeberria et al., 2022) as well as the code to fit and validate the models used. Note that due to confidentiality issues with the real data, a simulated dataset has been used and then, results are not fully reproducible but are similar.
 
 ## **Table of contents**
 ------------------------------------------------------------------------
