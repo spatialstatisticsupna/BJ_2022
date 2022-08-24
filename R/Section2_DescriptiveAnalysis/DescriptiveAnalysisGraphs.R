@@ -1,7 +1,7 @@
 #Using mortality to predict incidence for rare and lethal cancers
 #in very small areas. Biometrical Journal (2022)
 # Author: Jaione Etxeberria 
-# This coda is developed in R-4.2.1 version
+# This code is developed under R-4.2.1 version
 
 ######################################################################
 ##### FIGURE 1: Map of regions in Navarre and Basque Country
