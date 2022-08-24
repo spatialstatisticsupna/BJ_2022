@@ -1,6 +1,6 @@
 ## **R code**
 
-This folder contains the R code to fit and validate all the models described in the paper and to create similar tables and figures. Due to confidentiality issues, a simulated data set is provided to get the results, and then it is not expected to get the same results given in the paper. Note also that, the R version we use here is R-4.2.1 (2022-06-23 ucrt) and the R-INLA version is 22.05.07. Platform: x86_64-w64-mingw32/x64 (64-bit). Running under: Windows 10 x64 (build 14393)
+This folder contains the R code to fit and validate all the models described in the paper and to create similar tables and figures. Due to confidentiality issues, a simulated data set is provided to get the results, and then it is not expected to get the same results given in the paper. Note also that, the R version we use here is R-4.2.1 (2022-06-23 ucrt) and the R-INLA version is 22.05.07. Platform: x86_64-w64-mingw32/x64 (64-bit). Running under: Windows 10 x64 (build 14393).
 
 [**Section1_SimulatedDataSet**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/tree/main/R/Section1_SimulatedDataSet "Section1_SimulatedDataSet")
 
