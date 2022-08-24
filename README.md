@@ -3,7 +3,7 @@
 Biometrical Journal 2022 (Accepted)
 ------------------------------------------------------------------------
 
-This repository contains the R code to create figures and tables similar to those described in the paper entitled *"Using mortality to predict incidence for rare and lethal cancers in very small areas"* (Etxeberria et al., 2022) as well as the code to fit and validate the models used. Note that due to confidentiality issues with the real data, a simulated dataset has been used and then, results are not fully reproducible but are similar.
+This repository contains the R code to create figures and tables similar to those described in the paper entitled *"Using mortality to predict incidence for rare and lethal cancers in very small areas"* (Etxeberria et al., 2022) as well as the code to fit and validate the models used. Note that due to confidentiality issues with the real data, a simulated dataset has been used and then, results are not fully reproducible.
 
 ## **Table of contents**
 ------------------------------------------------------------------------
@@ -17,7 +17,7 @@ This repository contains the R code to create figures and tables similar to thos
 # **R code**
 ------------------------------------------------------------------------
 
-R code to fit the multivariate spatio-temporal models described in the paper is included [here](https://github.com/spatialstatisticsupna/Using-mortality-to-predict-incidence-for-rare-and-lethal-cancers-in-very-small-areas/blob/master/R/).
+R code to fit the multivariate spatio-temporal models described in the paper plus the code to create figures and tables is included [here](https://github.com/spatialstatisticsupna/Using-mortality-to-predict-incidence-for-rare-and-lethal-cancers-in-very-small-areas/blob/master/R/).
 
 # **Acknowledgements**
 ------------------------------------------------------------------------
