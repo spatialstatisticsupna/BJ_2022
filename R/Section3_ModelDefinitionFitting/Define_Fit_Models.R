@@ -167,7 +167,7 @@ for(mod in c(1:8)){
 
 
 #### Once the models are fitted, run the following code to compare their
-#results in terms of model selection criterion and create Table 1 and 4 (Supp. Mat)
+#results in terms of model selection criterion and create Table 1 and 4 (Appendix)
 for(mod in c(1:8)){
   load(paste0("Modelo",mod,".Rdata"))
   result=get(paste0("result",mod))
@@ -201,7 +201,7 @@ xtable(table1)
 
 
 
-#### Table 4 (Supp Mat) Model selection criteria and predictive ability for the different models.
+#### Table 4 (Appendix) Model selection criteria and predictive ability for the different models.
 table4=tab
 xtable(table4)
 
