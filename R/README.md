@@ -39,7 +39,7 @@ The neighbourhood matrix is also provided by the **nc.inla** file.
 
 [**Section4_ValidatingPredictions**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/tree/main/R/Section4_ValidatingPredictions "Section4_ValidatingPredictions")
 
-This section provides the code to run the validation of gievn in *Section 4* of the paper. First open [Validation_MainFile.R](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/Validation_MainFile.R "Validation_MainFile.R") to
+This section provides the code to run the validation given in *Section 4* of the paper. First open [Validation_MainFile.R](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/Validation_MainFile.R "Validation_MainFile.R") to
 
 1.  Create data sets for validation. These data sets are stored in folder *DataforValidation*  
 
