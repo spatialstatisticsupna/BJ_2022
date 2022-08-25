@@ -162,7 +162,7 @@ for(ag in 2:6){
 #### Figure A.2 Coefficients of variation (CV) of the predicted rates by regions and age-groups obtained
 #as the posterior standard deviation of the rates divided by the posterior mean. 12
 
-#### Maps will be generated automatically in pdf forma using the name Mod_8_Spatial_cv_AgeGroupXX.pdf
+#### Maps will be generated automatically in pdf format using the name Mod_8_Spatial_cv_AgeGroupXX.pdf
 
 carto <- st_read('carto/carto.shp')
 carto$region <- c("Gran Bilbao", "North Biscay", "South Biscay", "West Gipuzkoa", "East Gipuzkoa", "Donostia-Bajo Bidasoa", "Alava", "Mid Navarra", "Navarra South", "Navarra North", "Pamplona")
