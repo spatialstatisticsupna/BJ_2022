@@ -1,10 +1,10 @@
 ## **R CODE**
 
-This folder contains the R code to fit and validate all the models described in the paper and to create similar tables and figures. Due to confidentiality issues, a simulated data set is provided to get the results, and then it is not expected to get the same results given in the paper. The code of this paper is organized in self-contained folders, which are named according to the corresponding sections of the paper. The folders are the following
+This folder contains the R code to fit and validate all the models described in the paper and to create similar tables and figures. Due to confidentiality issues, a simulated data set is provided to get the results, and then it is not expected to get the same results given in the paper. The code of this paper is organized in self-contained folders, which are named according to the corresponding sections of the paper. The folders are the following:
 
 ### [**Section2_DescriptiveAnalysis**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/tree/main/R/Section2_DescriptiveAnalysis "Section2_DescriptiveAnalysis")
 
-This folder contains the file **DBrainNA.txt** with the simulated data set used to get the descriptive analysis. This file includes information on the following variables
+This folder contains the file **DBrainNA.txt** with the simulated data set used to get the descriptive analysis. This file includes information on the following variables:
 
 -   **sex**: Takes value 1 for males and 2 for females.
 
@@ -14,27 +14,27 @@ This folder contains the file **DBrainNA.txt** with the simulated data set used 
 
 -   **region**: Takes the values 1 to 11 for the following regions of the Basque Country and Navarre: 1-Gran Bilbao, 2-North Biscay, 3-South Biscay, 4-West Gipuzkoa, 5-East Gipuzkoa, 6-Donostia-Bajo Bidasoa, 7-Alava, 8-Mid Navarra, 9-Navarra South, 10-Navarra North, 11-Pamplona.
 
--   **outcome**: Indicates if the observed number of cases are incident cases or deaths (mortality)
+-   **cases**: Observed number of incident cases or deaths (detailed by the outcome variable).
 
--   **cases**: Observed number of incident cases or deaths (detailed by the outcome variable)
+-   **pop**: Population at risk in each domain.
 
--   **pop**: Population at risk in each domain
+-   **outcome**: Indicates if the observed number of cases are incident cases or deaths (mortality).
 
 The file [**DescriptiveAnalysisGraphs.R**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section2_DescriptiveAnalysis/DescriptiveAnalysisGraphs.R "DescriptiveAnalysisGraphs.R") allows to get and save all the figures presented in *Section 2* of the paper. More precisely, Figures 1 to 4 are created and saved using the code of this file:
 
--   **Figure 1:** Regions in Navarre and Basque Country
+-   **Figure 1:** Regions in Navarre and Basque Country.
 
 -   **Figure 2:** Age and gender-specific incidence and mortality rates during the study period.
 
--   **Figure 3:** Crude incidence and mortality rates trends by gender
+-   **Figure 3:** Crude incidence and mortality rates trends by gender.
 
--   **Figure 4:** Crude incidence and mortality rates by region for both genders (top panels and saved as **Fig4_1**) and a scatter plot of incidence and mortality rates by region (bottom panel and saved as **Fig4_2**)
+-   **Figure 4:** Crude incidence and mortality rates by region for both genders (top panels saved as **Fig4_1**) and a scatter plot of incidence and mortality rates by region (bottom panel saved as **Fig4_2**).
 
 Finally, the cartographic boundary files are also provided in the folder ***carto.***
 
 ### [**Section3_ModelDefinitionFitting**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/tree/main/R/Section3_ModelDefinitionFitting "Section3_ModelDefinitionFitting")
 
-The [**Define_Fit_Models.R**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section3_ModelDefinitionFitting/Define_Fit_Models.R "Define_Fit_Models.R") file contains the code to get the file **DBrain.txt** with the aggregated six age groups used in the analysis, and to fit models M1-to-M8 described in *Section 3* of the paper. It is highly recommended to read the INLA documentation regarding "besag2" model to better understand how Besag2 model for weighted spatial effects should be defined. To do this, open Rstudio and run the following code
+The [**Define_Fit_Models.R**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section3_ModelDefinitionFitting/Define_Fit_Models.R "Define_Fit_Models.R") file contains the code to get the file **DBrain.txt** with the aggregated six age groups used in the analysis, and to fit models M1-to-M8 described in *Section 3* of the paper. It is highly recommended to read the INLA documentation regarding "besag2" model to better understand how Besag2 model for weighted spatial effects should be defined. To do this, open Rstudio and run the following code:
 
 `library(INLA)`
 
@@ -48,7 +48,7 @@ Similar results to those in Table 1 and 4 of the paper can be obtained running t
 
 -   **Table 4 (in the Appendix):** Model selection criteria and predictive ability for the different models.
 
-Finally, the folder includes the files **Modelo1.Rdata,...,Modelo8.Rdata** with the fit of the models **M1 to M8**. The user do not need to run all the code to get Tables 1 and 4, but simply load the files **Modelo1.Rdata,....,Modelo8.Rdata** and run the lines to produce the Tables.
+Finally, the folder includes the files **Modelo1.Rdata,...,Modelo8.Rdata** with the fit of the models **M1 to M8**. The user does not need to run all the code to get Tables 1 and 4, but simply load the files **Modelo1.Rdata,....,Modelo8.Rdata** and run the lines to produce the tables.
 
 ### [**Section4_ValidatingPredictions**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/tree/main/R/Section4_ValidatingPredictions "Section4_ValidatingPredictions")
 
@@ -56,33 +56,33 @@ This section provides the code to run the validation process in *Section 4* of t
 
 First open [**Validation_MainFile.R**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/Validation_MainFile.R "Validation_MainFile.R") to
 
-1.  Create data sets for validation. These data sets are stored in folder *DataforValidation*
+1.  Create data sets for validation. These data sets are stored in folder *DataforValidation*.
 
 2.  Fit all the models in different validation periods. The file [Models.R](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/Models.R "Models.R") will be required in this step. Results will be stored in the *Rdatas* folder. Note that the fit of Models 1-to-8 thorough the different validation periods are already stored in the *Rdatas* folder. These .Rdata files will be used in the next step.
 
 3.  In this step, the .Rdata files generated in step 2 are uploaded. The predictions from each model and validation period are saved in the *ValidationResults* folder. More precisely the files *Modelo1val.txt*, ..., *Modelo8val.txt* are generated. Each file contains the observed and predicted incidence counts in different validation periods that will be used afterwards to compute several assessment measures.
 
-Next, go to ***ValidationResults*** folder and run the code described in the file [**GetValidationResults.R**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/ValidationResults/GetValidationResults.R "GetValidationResults.R") in order to get the results presented in *Section 4* of the paper. More precisely, the following Figures and Tables can be generated and saved using the code of this file:
+Next, go to ***ValidationResults*** folder and run the code described in the file [**GetValidationResults.R**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/ValidationResults/GetValidationResults.R "GetValidationResults.R") in order to get the results presented in *Section 4* of the paper. More precisely, the following figures and tables can be generated and saved using the code of this file:
 
--   **Table 2** Global absolute relative bias computed using one step ahead predictions
+-   **Table 2**: Global absolute relative bias computed using one step ahead predictions.
 
--   **Figure 5** Age specific relative biases in one step ahead predictions. *Note that, this figure should be saved manually*.
+-   **Figure 5**: Age specific relative biases in one step ahead predictions. *Note that this figure should be saved manually*.
 
--   **Figure 6** Maps with region specific relative biases in one step ahead predictions
+-   **Figure 6**:  Maps with region specific relative biases in one step ahead predictions.
 
 ### [**Section5_RealDataAnalysis**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/tree/main/R/Section5_RealDataAnalysis "Section5_RealDataAnalysis")
 
-This folder includes the code to get similar results as in *Section 5* of the paper but using the simulated data. In this section model **M8** is considered to provide BCNS cancer incidence predictions in Navarre and the Basque Country by region, age-group, gender and period. The reader can get similar results with any other model. To do so, the corresponding Rdata (*Model1.Rdata, ... ,Model7.Rdata*) stored in *Section3_ModelDefinitionFitting* should be moved to this folder. Figures and tables of this section can be automatically obtained by running the code described in the file [**RealDataAnalisisMainFile.R**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section5_RealDataAnalysis/RealDataAnalisisMainFile.R "RealDataAnalisisMainFile.R"). More precisely, the following outputs are generated
+This folder includes the code to get similar results as in *Section 5* of the paper but using the simulated data. In this section model **M8** is considered to provide BCNS cancer incidence predictions in Navarre and the Basque Country by region, age-group, gender and period. The reader can get similar results with any other model. To do so, the corresponding Rdata (*Model1.Rdata, ... ,Model7.Rdata*) stored in *Section3_ModelDefinitionFitting* should be moved to this folder. Figures and tables of this section can be automatically obtained by running the code described in the file [**RealDataAnalisisMainFile.R**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section5_RealDataAnalysis/RealDataAnalisisMainFile.R "RealDataAnalisisMainFile.R"). More precisely, the following outputs are generated:
 
--   **Table 3** Observed versus Predicted number of Brain Cancer incidence cases per period
+-   **Table 3**: Observed versus predicted number of brain cancer incidence cases per period.
 
--   **Figure 7** Gender-specific temporal trends and predicted rates for 2005-06 and 2007-08 obtained with M8
+-   **Figure 7**: Gender-specific temporal trends and predicted rates for 2005-06 and 2007-08 obtained with M8.
 
--   **Figure 8** Maps of predicted incidence rates for age groups \< 40 (**Fig8_1**), 40 - 49 (**Fig8_2**) and, 50 - 59 (**Fig8_3**) for 2007-2008 period for the 11 health regions. Note that the rate scale used for \< 40 is different from that used for 40 - 49 and, 50 - 59. *These figures are merged in a LaTeX editor*.
+-   **Figure 8**: Maps of predicted incidence rates for age groups \< 40 (**Fig8_1**), 40 - 49 (**Fig8_2**) and, 50 - 59 (**Fig8_3**) for 2007-2008 period for the 11 health regions. Note that the rate scale used for \< 40 is different from that used for 40 - 49 and, 50 - 59. *These figures are merged in a LaTeX editor*.
 
--   **Figure 9** Maps of predicted incidence rates for age groups 60 - 69 (**Fig9_1**), 70 - 79 (**Fig9_2**) and 80+ (**Fig9_3**) for 2007-2008 period for the 11 health regions. *These figures are merged in a LaTeX editor*.
+-   **Figure 9**: Maps of predicted incidence rates for age groups 60 - 69 (**Fig9_1**), 70 - 79 (**Fig9_2**) and 80+ (**Fig9_3**) for 2007-2008 period for the 11 health regions. *These figures are merged in a LaTeX editor*.
 
--   **Figure 11** Coefficients of variation by regions and age-groups obtained as the posterior standard deviation of the rates divided by the posterior mean.
+-   **Figure 11**: Coefficients of variation by regions and age-groups obtained as the posterior standard deviation of the rates divided by the posterior mean.
 
 Finally, the folder ***carto*** with the cartographic boundary files and the data set **DBrain.txt** are also provided***.***
 
