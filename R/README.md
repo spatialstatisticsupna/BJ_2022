@@ -1,11 +1,10 @@
-
 ## **R CODE**
 
-This folder contains the R code to fit and validate all the models described in the paper and to create similar tables and figures. Due to confidentiality issues, a simulated data set is provided to get the results, and then it is not expected to get the same results given in the paper. The code of this paper is organized in self-contained folders, which are named according to the sections of the paper they represent. The folders are the following
+This folder contains the R code to fit and validate all the models described in the paper and to create similar tables and figures. Due to confidentiality issues, a simulated data set is provided to get the results, and then it is not expected to get the same results given in the paper. The code of this paper is organized in self-contained folders, which are named according to the corresponding sections of the paper. The folders are the following
 
 ### [**Section2_DescriptiveAnalysis**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/tree/main/R/Section2_DescriptiveAnalysis "Section2_DescriptiveAnalysis")
 
-This folder contains the simulated data file: The **DBrainNA.txt** used to get the descriptive analysis. This file contains the following information:
+This folder contains the file **DBrainNA.txt** with the simulated data set used to get the descriptive analysis. This file includes information on the following variables
 
 -   **sex**: Takes value 1 for males and 2 for females.
 
@@ -13,7 +12,7 @@ This folder contains the simulated data file: The **DBrainNA.txt** used to get t
 
 -   **period**: Takes values 1 to 10 representing the periods 1989-1990, 1991-1992, ... , 2007-2008 (managed on a biannual basis).
 
--   **region**: Takes the values 1 to 11 for the following regions of Navarre and Basque Country: 1-Gran Bilbao, 2-North Biscay, 3-South Biscay, 4-West Gipuzkoa, 5-East Gipuzkoa, 6-Donostia-Bajo Bidasoa, 7-Alava, 8-Mid Navarra, 9-Navarra South, 10-Navarra North, 11-Pamplona.
+-   **region**: Takes the values 1 to 11 for the following regions of the Basque Country and Navarre: 1-Gran Bilbao, 2-North Biscay, 3-South Biscay, 4-West Gipuzkoa, 5-East Gipuzkoa, 6-Donostia-Bajo Bidasoa, 7-Alava, 8-Mid Navarra, 9-Navarra South, 10-Navarra North, 11-Pamplona.
 
 -   **outcome**: Indicates if the observed number of cases are incident cases or deaths (mortality)
 
@@ -29,7 +28,7 @@ The file [**DescriptiveAnalysisGraphs.R**](https://github.com/spatialstatisticsu
 
 -   **Figure 3:** Crude incidence and mortality rates trends by gender
 
--   **Figure 4:** Crude incidence and mortality rates by region for both genders (top panels and saved as **Fig4_1**) and scatter plot of incidence and mortality rates by region (bottom panel and saved as **Fig4_2**)
+-   **Figure 4:** Crude incidence and mortality rates by region for both genders (top panels and saved as **Fig4_1**) and a scatter plot of incidence and mortality rates by region (bottom panel and saved as **Fig4_2**)
 
 Finally, the cartographic boundary files are also provided in the folder ***carto.***
 
@@ -43,29 +42,33 @@ The [**Define_Fit_Models.R**](https://github.com/spatialstatisticsupna/Biometric
 
 The neighborhood matrix is also provided by the **nc.inla** file.
 
-Similar results obtained in Table 1 and 4 can be obtained running the code of this file. The code also allows getting the tables in LaTeX format
+Similar results to those in Table 1 and 4 of the paper can be obtained running the code of this file. The code also allows getting the tables in LaTeX format
 
 -   **Table 1:** Model selection criteria.
 
 -   **Table 4 (in the Appendix):** Model selection criteria and predictive ability for the different models.
 
+Finally, the folder includes the files **Modelo1.Rdata,...,Modelo8.Rdata** with the fit of the models **M1 to M8**. The user do not need to run all the code to get Tables 1 and 4, but simply load the files **Modelo1.Rdata,....,Modelo8.Rdata** and run the lines to produce the Tables.
+
 ### [**Section4_ValidatingPredictions**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/tree/main/R/Section4_ValidatingPredictions "Section4_ValidatingPredictions")
 
-This section provides the code to run the validation of given in *Section 4* of the paper. First open [**Validation_MainFile.R**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/Validation_MainFile.R "Validation_MainFile.R") to
+This section provides the code to run the validation process in *Section 4* of the paper.
+
+First open [**Validation_MainFile.R**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/Validation_MainFile.R "Validation_MainFile.R") to
 
 1.  Create data sets for validation. These data sets are stored in folder *DataforValidation*
 
-2.  Fit all the models in different validation periods. The file [Models.R](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/Models.R "Models.R") will be required in this step. Results will be stored in the *Rdatas* folder. Note that, the fit of the Models 1-to-8 thorough the different validation periods are already stored in the *Rdatas* folder therefore the user do not need to run all the code to get Tables 1 and 4, but simply load these .Rdatas using the code of the next step.
+2.  Fit all the models in different validation periods. The file [Models.R](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/Models.R "Models.R") will be required in this step. Results will be stored in the *Rdatas* folder. Note that the fit of Models 1-to-8 thorough the different validation periods are already stored in the *Rdatas* folder. These .Rdata files will be used in the next step.
 
-3.  Save the predictions provided by the models in the *ValidationResults* folder to analyze afterwards using different assessment measurements. These results are automatically saved as *Modelo1val.txt*, ..., *Modelo8val.txt.* Note that, the user do not need to save these files as there are already provided.
+3.  In this step, the .Rdata files generated in step 2 are uploaded. The predictions from each model and validation period are saved in the *ValidationResults* folder. More precisely the files *Modelo1val.txt*, ..., *Modelo8val.txt* are generated. Each file contains the observed and predicted incidence counts in different validation periods that will be used afterwards to compute several assessment measures.
 
-Secondly, **go to *ValidationResults* folder** and run the code described in the file [**GetValidationResults.R**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/ValidationResults/GetValidationResults.R "GetValidationResults.R") in order to get the results presented in *Section 4* of the paper. More precisely, the following Figures and Tables can be generated and saved using the code of this file:
+Next, go to ***ValidationResults*** folder and run the code described in the file [**GetValidationResults.R**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/blob/main/R/Section4_ValidatingPredictions/ValidationResults/GetValidationResults.R "GetValidationResults.R") in order to get the results presented in *Section 4* of the paper. More precisely, the following Figures and Tables can be generated and saved using the code of this file:
 
 -   **Table 2** Global absolute relative bias computed using one step ahead predictions
 
 -   **Figure 5** Age specific relative biases in one step ahead predictions. *Note that, this figure should be saved manually*.
 
--   **Figure 6** Region specific relative biases in one step ahead predictions
+-   **Figure 6** Maps with region specific relative biases in one step ahead predictions
 
 ### [**Section5_RealDataAnalysis**](https://github.com/spatialstatisticsupna/Biometrical_Journal_2022/tree/main/R/Section5_RealDataAnalysis "Section5_RealDataAnalysis")
 
@@ -81,11 +84,11 @@ This folder includes the code to get similar results as in *Section 5* of the pa
 
 -   **Figure 11** Coefficients of variation by regions and age-groups obtained as the posterior standard deviation of the rates divided by the posterior mean.
 
-Finally, the data set **DBrain.txt** and the cartographic boundary files are also provided in the folder ***carto.***
+Finally, the folder ***carto*** with the cartographic boundary files and the data set **DBrain.txt** are also provided***.***
 
-## R SESSION AND R PACKAGES. VERSION INFO
+## R  AND R PACKAGES. VERSION INFO
 
-``` r
+``` {.r}
 R version 4.2.1 (2022-06-23 ucrt)
 Platform: x86_64-w64-mingw32/x64 (64-bit)
 Running under: Windows 10 x64 (build 17763)
@@ -128,4 +131,3 @@ loaded via a namespace (and not attached):
 [71] lwgeom_0.2-8        e1071_1.7-11        later_1.3.0         class_7.3-20        tibble_3.1.8       
 [76] iterators_1.0.14    units_0.8-0         cluster_2.1.3       ellipsis_0.3.2   
 ```
-
