@@ -42,7 +42,7 @@ The [**Define_Fit_Models.R**](https://github.com/spatialstatisticsupna/Biometric
 
 The neighborhood matrix is also provided by the **nc.inla** file.
 
-Similar results to those in Table 1 and 4 of the paper can be obtained running the code of this file. The code also allows getting the tables in LaTeX format
+Similar results to those in Tables 1 and 4 of the paper can be obtained running the code of this file. The code also allows getting the tables in LaTeX format
 
 -   **Table 1:** Model selection criteria.
 
