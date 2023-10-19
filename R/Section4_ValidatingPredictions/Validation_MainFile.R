@@ -7,7 +7,7 @@
 #setwd(".../R/Section4_ValidatingPredictions")
 ######################################################################
 library(INLA)
-inla.setOption(inla.mode="experimental")
+
 
 
 #### Load the data
