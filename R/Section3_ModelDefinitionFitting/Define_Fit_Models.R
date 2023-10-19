@@ -10,7 +10,6 @@ library(Hmisc)
 library(sp)
 #install.packages("INLA",repos=c(getOption("repos"),INLA="https://inla.r-inla-download.org/R/stable"), dep=TRUE)
 library(INLA)
-inla.setOption(inla.mode="experimental")
 library(xtable)
 
 ### Read the complete simulated data set
